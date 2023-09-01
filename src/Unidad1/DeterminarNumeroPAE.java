@@ -26,7 +26,7 @@ public class DeterminarNumeroPAE {
         		int contador = 1;
         		for (int i = 2; i <= num / 2; i++) {
         			if (num % i == 0) {
-        				contador = contador + i;
+        				contador += i;
         			}
         		}
         		if (num == contador) {
