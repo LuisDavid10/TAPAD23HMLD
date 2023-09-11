@@ -36,25 +36,28 @@ public class DeterminarPrimo {
 	}
 }
 
-        if (num <= 1) {
-            JOptionPane.showMessageDialog(null, "El número no es primo");
-        } else {
-            boolean esPrimo = true;
-            for (int i = 2; i <= Math.sqrt(num); i++) {
-                if (num % i == 0) {
-                    esPrimo = false;
-                    break;
-                }
-            }
 
-            if (esPrimo) {
-                JOptionPane.showMessageDialog(null, "El número es primo");
-            } else {
-                JOptionPane.showMessageDialog(null, "El número no es primo");
-            }
-        }
-    }
-}
+//otra solucion creo 
+
+//        if (num <= 1) {
+//            JOptionPane.showMessageDialog(null, "El número no es primo");
+//        } else {
+//            boolean esPrimo = true;
+//            for (int i = 2; i <= Math.sqrt(num); i++) {
+//                if (num % i == 0) {
+//                    esPrimo = false;
+//                    break;
+//                }
+//            }
+//
+//            if (esPrimo) {
+//                JOptionPane.showMessageDialog(null, "El número es primo");
+//            } else {
+//                JOptionPane.showMessageDialog(null, "El número no es primo");
+//            }
+//        }
+//    }
+//}
 
 //		//opcion del profe
 //		system.out.println("dame un valor entero positivo");

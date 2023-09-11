@@ -23,22 +23,26 @@ public class DeterminarNumeroPAE {
             } else {
                 JOptionPane.showMessageDialog(null, "El número no es primo");
               //no es primo
-        		int contador = 1;
-        		for (int i = 2; i <= num / 2; i++) {
+        		int sumaDivisores = 1;
+        		for (int i = 2; i <= (int)Math.pow(num,1.0/2); i++) {
         			if (num % i == 0) {
-        				contador += i;
+        				sumaDivisores += i;
+						int cociente = num / i;
+						if(i < cociente)
+						sumaDivisores += cociente;
+        				sumaDivisores += i;
         			}
         		}
-        		if (num == contador) {
+        		if (num == sumaDivisores) {
         			JOptionPane.showConfirmDialog(null, "El numero  " + num + " es perfecto");
-        		} else if (num < contador) {
-        			JOptionPane.showConfirmDialog(null, "El numero " + num + " es abundante con " + contador);
+        		} else if (num < sumaDivisores) {
+        			JOptionPane.showConfirmDialog(null, "El numero " + num + " es abundante con " + sumaDivisores);
         		} else {
-        			JOptionPane.showConfirmDialog(null, "El numero " + num + " es escaso con " + contador);
+        			JOptionPane.showConfirmDialog(null, "El numero " + num + " es escaso con " + sumaDivisores);
         		}
             }
         }
-   		
 	}
-
+		
 	}
+	
