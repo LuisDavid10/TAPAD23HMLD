@@ -56,5 +56,51 @@ public class MetodosRecursivos {
 				System.out.println(n);
 				}
 		}
+		
+		
+		/**
+		 * 
+		 */
+		private void MaximoComunDivisor (int M, int N) {
+			if(N>M) {
+				int a;
+				a=N;
+				N=M;
+				M=a;
+			}else {
+				//caso base
+				if(N=0) {
+					MaximoComunDivisor = M;
+				}else{
+					MaximoComunDivisor = MaximoComunDivisor (N, M % N );
+				}
+			}
+		}
 
+		/**
+		 * 
+		 */
+		public static void main (String[] args){
+			Scanner = new Scanner.in (System.in);
+
+			if(M > 0 && N>=0){
+				MaximoComunDivisor(M, N);
+			}else{
+				Exception e;
+			}
+		}
+
+		/**
+		 * Metodo recursivo para calcular X^y
+		 * donde x es la base y y es el exponente 
+		 */
+		public int potenciaRecursivo(int x, int y){
+			if(y == 0){
+				return x;
+			}else if(y==1){
+				return x;
+			}else{
+				return x(NumeroExponencial (x,y-1));
+			}
+		}
 }
