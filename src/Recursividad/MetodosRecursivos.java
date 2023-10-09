@@ -130,7 +130,7 @@ public class MetodosRecursivos {
 		}
 		
 
-		public class MaximoComunDivisorCalculator {
+		public static class MaximoComunDivisorCalculator {
 		
 			/**
 			 * Calcula el máximo común divisor (MCD) de M y N de manera recursiva.
@@ -251,7 +251,7 @@ public class MetodosRecursivos {
 		 * @param Un número entero positivo como decimal y una base a la que lo queremos cambiar
 		 * @return El número en la base en que lo pedimos 
 		 */
-		public  String decimalABase(int decimal, int base) {
+		public static String decimalABase(int decimal, int base) {
 			//caso base
 			if (decimal < base) {
 				return Integer.toString(decimal);
@@ -273,7 +273,7 @@ public class MetodosRecursivos {
 		 * 
 		 * Metodo del profe
 		 */
-		public void mostrarDecimalaCualquierBaseRecursivo(int decimal, int base) {
+		public static void mostrarDecimalaCualquierBaseRecursivo(int decimal, int base) {
 			
 			if(decimal < base) {
 				//regresar cadena con el valor de decimal
@@ -294,7 +294,7 @@ public class MetodosRecursivos {
 			}
 		}
 		
-		public char digitoACaracter(int digitoDecimal) {
+		public static char digitoACaracter(int digitoDecimal) {
 			String digitoACaracter ="0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 			return digitoACaracter.charAt(digitoDecimal);
 		
