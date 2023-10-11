@@ -1,7 +1,7 @@
 package Recursividad;
 
 import java.util.Scanner;
-import javax.swing.JOptionPane;
+
 
 public class MetodosRecursivos {
 
@@ -115,58 +115,76 @@ public class MetodosRecursivos {
 		 		return MaximoComunDivisor(N, M % N); // Llamada recursiva
 		 	}
 		}
+		/**
+		 * chatgpt
+		 * @param args
+		 */
+public class MaximoComunDivisorCalculator {
+
+    /**
+     * Calcula el máximo común divisor (MCD) de M y N de manera recursiva.
+     */
+    private static int MaximoComunDivisor(int M, int N) {
+        if (N == 0) {
+            return M; // Caso base: el MCD es M cuando N es 0
+        } else {
+            return MaximoComunDivisor(N, M % N); // Llamada recursiva
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Ingrese el valor de M: ");
+        int M = teclado.nextInt();
+        System.out.print("Ingrese el valor de N: ");
+        int N = teclado.nextInt();
+
+        if (M > 0 && N >= 0) {
+            int mcd = MaximoComunDivisor(M, N);
+            System.out.println("El MCD de " + M + " y " + N + " es " + mcd);
+        } else {
+            System.out.println("M y N deben ser valores positivos.");
+        }
+    }
+}
+
 
 		/**
 		 * 
 		 */
-		 public static void main (String[] args){
-		  Scanner teclado = new Scanner(System.in);
+	    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
 
-		 	if(M > 0 && N>=0){
-		 		MaximoComunDivisor(M, N);
-		 	}else{
-		 		Exception e;
-		 	}
-		}
-		
+        System.out.print("Ingrese el valor de M: ");
+        int M = teclado.nextInt();
+        System.out.print("Ingrese el valor de N: ");
+        int N = teclado.nextInt();
 
-		public static class MaximoComunDivisorCalculator {
-		
-			/**
-			 * Calcula el máximo común divisor (MCD) de M y N de manera recursiva.
-			 */
-			private static int MaximoComunDivisor(int M, int N) {
-				if (N > M) {
-					int temp = N;
-					N = M;
-					M = temp;
-				}
-		
-				if (N == 0) {
-					return M; // Caso base: el MCD es M
-				} else {
-					return MaximoComunDivisor(N, M % N); // Llamada recursiva
-				}
-			}
-		
-			public static void main(String[] args) {
-				Scanner teclado = new Scanner(System.in);
-		
-				System.out.print("Ingrese el valor de M: ");
-				int M = teclado.nextInt();
-				System.out.print("Ingrese el valor de N: ");
-				int N = teclado.nextInt();
-		
-				if (M > 0 && N >= 0) {
-					int mcd = MaximoComunDivisor(M, N);
-					System.out.println("El MCD de " + M + " y " + N + " es " + mcd);
-				} else {
-					System.out.println("M y N deben ser valores positivos.");
-				}
-			}
-		}
-		
+        if (M > 0 && N >= 0) {
+            int mcd = calcularMaximoComunDivisor(M, N);
+            System.out.println("El MCD de " + M + " y " + N + " es " + mcd);
+        } else {
+            System.out.println("M y N deben ser valores positivos.");
+        }
+    }
 
+    /**
+     * Calcula el máximo común divisor (MCD) de M y N de manera recursiva.
+     */
+    private static int calcularMaximoComunDivisor(int M, int N) {
+        if (N > M) {
+            int temp = N;
+            N = M;
+            M = temp;
+        }
+
+        if (N == 0) {
+            return M; // Caso base: el MCD es M
+        } else {
+            return calcularMaximoComunDivisor(N, M % N); // Llamada recursiva
+        }
+    }
 
 
 
